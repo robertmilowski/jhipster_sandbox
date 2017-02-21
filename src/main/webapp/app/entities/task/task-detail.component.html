@@ -1,0 +1,39 @@
+
+<div *ngIf="task">
+    <h2><span jhiTranslate="jhipsterSandboxApp.task.detail.title">Task</span> {{task.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row">
+        <dt><span jhiTranslate="jhipsterSandboxApp.task.name">Name</span></dt>
+        <dd>
+            <span>{{task.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterSandboxApp.task.priority">Priority</span></dt>
+        <dd>
+            <span>{{task.priority}}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterSandboxApp.task.startDate">Start Date</span></dt>
+        <dd>
+            <span>{{task.startDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterSandboxApp.task.person">Person</span></dt>
+        <dd>
+            <div *ngIf="task.person">
+                <a [routerLink]="['/person', task.person?.id]">{{task.person?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'task/'+ task.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,22 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "task",
+            "otherEntityName": "task",
+            "otherEntityRelationshipName": "person"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170221065924",
+    "entityTableName": "person",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}
