@@ -1,0 +1,16 @@
+entity Person {
+    Name String
+}
+
+entity Task 
+{
+    name String required minlength(2) maxlength(50),
+	priority Integer,
+    startDate LocalDate
+}
+
+
+
+relationship OneToMany {
+	Person{task} to Task{}
+}
