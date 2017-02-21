@@ -3,6 +3,8 @@ import { RouterModule } from '@angular/router';
 
 import { JhipsterSandboxSharedModule } from '../../shared';
 
+import {TaskComponent} from '../task/task.component'; // <-- Added here
+
 import {
     PersonService,
     PersonPopupService,
@@ -40,6 +42,7 @@ let ENTITY_STATES = [
         PersonPopupComponent,
         PersonDeleteDialogComponent,
         PersonDeletePopupComponent,
+        TaskComponent, // <-- Added here
     ],
     providers: [
         PersonService,
