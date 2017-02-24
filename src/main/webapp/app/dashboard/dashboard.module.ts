@@ -9,7 +9,7 @@ import { JhipsterSandboxPersonModule } from '../entities/person/person.module';
 import { PersonComponent } from '../entities/person';
 
 import { JhipsterSandboxTaskModule } from '../entities/task/task.module';
-import { TaskComponent } from '../entities/task';
+import { TaskListComponent } from '../entities/task';
 
 @NgModule({
     imports: [
@@ -23,7 +23,7 @@ import { TaskComponent } from '../entities/task';
     ],
     entryComponents: [
         PersonComponent,
-        TaskComponent,
+        TaskListComponent,
     ],
     providers: [
     ],

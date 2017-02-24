@@ -7,6 +7,7 @@ import {
     TaskService,
     TaskPopupService,
     TaskComponent,
+    TaskListComponent,
     TaskDetailComponent,
     TaskDialogComponent,
     TaskPopupComponent,
@@ -28,6 +29,7 @@ let ENTITY_STATES = [
     ],
     declarations: [
         TaskComponent,
+        TaskListComponent,
         TaskDetailComponent,
         TaskDialogComponent,
         TaskDeleteDialogComponent,
@@ -36,6 +38,7 @@ let ENTITY_STATES = [
     ],
     entryComponents: [
         TaskComponent,
+        TaskListComponent,
         TaskDialogComponent,
         TaskPopupComponent,
         TaskDeleteDialogComponent,
@@ -45,7 +48,7 @@ let ENTITY_STATES = [
         TaskService,
         TaskPopupService,
     ],
-    exports:      [ TaskComponent ],
+    exports:      [ TaskListComponent ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class JhipsterSandboxTaskModule {}
