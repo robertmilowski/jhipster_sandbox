@@ -45,6 +45,7 @@ let ENTITY_STATES = [
         TaskService,
         TaskPopupService,
     ],
+    exports:      [ TaskComponent ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class JhipsterSandboxTaskModule {}

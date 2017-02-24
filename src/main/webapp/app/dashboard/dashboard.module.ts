@@ -8,19 +8,22 @@ import { DASHBOARD_ROUTE, DashboardComponent } from './';
 import { JhipsterSandboxPersonModule } from '../entities/person/person.module';
 import { PersonComponent } from '../entities/person';
 
+import { JhipsterSandboxTaskModule } from '../entities/task/task.module';
+import { TaskComponent } from '../entities/task';
 
 @NgModule({
     imports: [
         JhipsterSandboxSharedModule,
+        JhipsterSandboxTaskModule,
         JhipsterSandboxPersonModule,
         RouterModule.forRoot([ DASHBOARD_ROUTE ], { useHash: true })
     ],
     declarations: [
         DashboardComponent,
-//        PersonComponent,
     ],
     entryComponents: [
         PersonComponent,
+        TaskComponent,
     ],
     providers: [
     ],
