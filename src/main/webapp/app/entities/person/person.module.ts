@@ -2,6 +2,8 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { JhipsterSandboxSharedModule } from '../../shared';
+import { JhipsterSandboxTaskModule } from '../task/task.module';
+import { TaskListComponent } from '../task';
 
 import {
     PersonService,
@@ -14,6 +16,8 @@ import {
     PersonDeleteDialogComponent,
     personRoute,
     personPopupRoute,
+    //JhipsterSandboxTaskModule,
+
 } from './';
 
 let ENTITY_STATES = [
@@ -24,6 +28,7 @@ let ENTITY_STATES = [
 @NgModule({
     imports: [
         JhipsterSandboxSharedModule,
+        JhipsterSandboxTaskModule,
         RouterModule.forRoot(ENTITY_STATES, { useHash: true })
     ],
     declarations: [
@@ -40,6 +45,7 @@ let ENTITY_STATES = [
         PersonPopupComponent,
         PersonDeleteDialogComponent,
         PersonDeletePopupComponent,
+        TaskListComponent,
     ],
     providers: [
         PersonService,
