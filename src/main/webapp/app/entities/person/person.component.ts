@@ -25,7 +25,8 @@ people: Person[];
         private eventManager: EventManager,
         private principal: Principal
     ) {
-        this.jhiLanguageService.setLocations(['person']);
+//        this.jhiLanguageService.setLocations(['person']);
+        this.jhiLanguageService.addLocation('person');
     }
 
     loadAll() {

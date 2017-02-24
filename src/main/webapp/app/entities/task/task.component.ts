@@ -25,7 +25,9 @@ tasks: Task[];
         private eventManager: EventManager,
         private principal: Principal
     ) {
-        this.jhiLanguageService.setLocations(['task']);
+//        this.jhiLanguageService.setLocations(['task']);
+        this.jhiLanguageService.addLocation('task');
+
     }
 
     loadAll() {
