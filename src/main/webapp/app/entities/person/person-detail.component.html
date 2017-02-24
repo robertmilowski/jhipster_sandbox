@@ -3,14 +3,12 @@
     <h2><span jhiTranslate="jhipsterSandboxApp.person.detail.title">Person</span> {{person.id}}</h2>
     <hr>
     <jhi-alert-error></jhi-alert-error>
-    <dl class="row">
+    <dl class="row-md jh-entity-details">
         <dt><span jhiTranslate="jhipsterSandboxApp.person.name">Name</span></dt>
         <dd>
             <span>{{person.name}}</span>
         </dd>
     </dl>
-
-    <jhi-task>Loading jhi-task...</jhi-task>
 
     <button type="submit"
             (click)="previousState()"

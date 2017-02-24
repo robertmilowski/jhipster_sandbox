@@ -1,16 +1,15 @@
 <div>
-    <h2><span jhiTranslate="jhipsterSandboxApp.task.home.title">Tasks</span>
-        <button class="btn btn-primary float-xs-right create-task" [routerLink]="['/', { outlets: { popup: ['task-new'] } }]">
+    <h2>
+        <span jhiTranslate="jhipsterSandboxApp.task.home.title">Tasks</span>
+        <button class="btn btn-primary float-right create-task" [routerLink]="['/', { outlets: { popup: ['task-new'] } }]">
             <span class="fa fa-plus"></span>
             <span  jhiTranslate="jhipsterSandboxApp.task.home.createLabel">
             Create new Task
             </span>
-        </button></h2>
+        </button>
+    </h2>
     <jhi-alert></jhi-alert>
-
-    <div class="container-fluid">
-        <div class="row">
-        </div>
+    <div class="row">
     </div>
     <br/>
     <div class="table-responsive" *ngIf="tasks">
@@ -36,7 +35,7 @@
                         <a [routerLink]="['../person', task.person?.id ]" >{{task.person?.id}}</a>
                     </div>
                 </td>
-                <td class="text-xs-right">
+                <td class="text-right">
                     <div class="btn-group flex-btn-group-container">
                         <button type="submit"
                                 [routerLink]="['../task', task.id ]"

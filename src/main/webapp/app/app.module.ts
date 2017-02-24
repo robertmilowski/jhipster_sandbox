@@ -25,6 +25,7 @@ import {
     ErrorComponent
 } from './layouts';
 
+import { JhipsterSandboxDashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
     imports: [
@@ -35,7 +36,8 @@ import {
         JhipsterSandboxHomeModule,
         JhipsterSandboxAdminModule,
         JhipsterSandboxAccountModule,
-        JhipsterSandboxEntityModule
+        JhipsterSandboxEntityModule,
+        JhipsterSandboxDashboardModule,
     ],
     declarations: [
         JhiMainComponent,

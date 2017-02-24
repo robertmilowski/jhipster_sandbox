@@ -73,6 +73,8 @@ export class JhiLoginModalComponent implements OnInit, AfterViewInit {
                 this.stateStorageService.resetPreviousState();
                 this.router.navigate([previousState.name], { queryParams:  previousState.params });
             }
+
+                this.router.navigate(['dashboard']);  // Added here
         }).catch(() => {
             this.authenticationError = true;
         });

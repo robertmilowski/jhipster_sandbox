@@ -4,10 +4,10 @@ import { UserRouteAccessService } from '../shared';
 import { DashboardComponent } from './';
 
 export const DASHBOARD_ROUTE: Route = {
-  path: '',
+  path: 'dashboard',
   component: DashboardComponent,
   data: {
-    authorities: [],
+    authorities: ['ROLE_USER'],
     pageTitle: 'dashboard.title'
   },
   canActivate: [UserRouteAccessService]
