@@ -5,16 +5,22 @@ import { JhipsterSandboxSharedModule } from '../shared';
 
 import { DASHBOARD_ROUTE, DashboardComponent } from './';
 
+import { JhipsterSandboxPersonModule } from '../entities/person/person.module';
+import { PersonComponent } from '../entities/person';
+
 
 @NgModule({
     imports: [
         JhipsterSandboxSharedModule,
+        JhipsterSandboxPersonModule,
         RouterModule.forRoot([ DASHBOARD_ROUTE ], { useHash: true })
     ],
     declarations: [
         DashboardComponent,
+//        PersonComponent,
     ],
     entryComponents: [
+        PersonComponent,
     ],
     providers: [
     ],

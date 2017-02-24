@@ -45,6 +45,7 @@ let ENTITY_STATES = [
         PersonService,
         PersonPopupService,
     ],
+    exports:      [ PersonComponent ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class JhipsterSandboxPersonModule {}
