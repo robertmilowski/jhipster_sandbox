@@ -39,7 +39,10 @@ export class TaskService {
     }
 
     query(req?: any): Observable<Response> {
+        console.log('query req=' + JSON.stringify(req));
         let options = this.createRequestOption(req);
+        console.log('options=' + JSON.stringify(options));
+
         return this.http.get(this.resourceUrl, options)
             .map((res: any) => this.convertResponse(res))
         ;
@@ -61,6 +64,8 @@ export class TaskService {
     }
 
     private createRequestOption(req?: any): BaseRequestOptions {
+
+        console.log('createRequestOption query=' + req.query);
         let options: BaseRequestOptions = new BaseRequestOptions();
         if (req) {
             let params: URLSearchParams = new URLSearchParams();
@@ -70,7 +75,8 @@ export class TaskService {
                 params.paramsMap.set('sort', req.sort);
             }
             params.set('query', req.query);
-
+            
+            console.log('createRequestOption options=' + req.query);
             options.search = params;
         }
         return options;

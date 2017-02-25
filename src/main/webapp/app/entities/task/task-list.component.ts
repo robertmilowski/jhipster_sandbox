@@ -31,15 +31,42 @@ tasks: Task[];
     }
 
     loadAll() {
-        this.taskService.query().subscribe(
+        console.log('loadAll');
+        this.taskService.query({
+
+            page: 1,
+            size: 2,
+            query: 'id=3'
+        }).subscribe(
             (res: Response) => {
                 this.tasks = res.json();
             },
             (res: Response) => this.onError(res.json())
         );
     }
+
+
+    loadTop5() {
+        console.log('loadTop5');
+        this.taskService.query({
+
+            page: 1,
+            size: 2,
+            query: 'select top 2 t from task t'
+        }
+            ).subscribe(
+            (res: Response) => {
+                this.tasks = res.json();
+            },
+            (res: Response) => this.onError(res.json())
+        );
+    }
+
+
     ngOnInit() {
-        this.loadAll();
+        console.log('  task-list:  ngOnInit() ');
+//        this.loadAll();
+        this.loadTop5();
         this.principal.identity().then((account) => {
             this.currentAccount = account;
         });
