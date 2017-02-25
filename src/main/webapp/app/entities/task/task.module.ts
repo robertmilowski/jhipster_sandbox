@@ -22,6 +22,7 @@ let ENTITY_STATES = [
     ...taskPopupRoute,
 ];
 
+
 @NgModule({
     imports: [
         JhipsterSandboxSharedModule,

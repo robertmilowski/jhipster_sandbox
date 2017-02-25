@@ -18,10 +18,13 @@ import {
     JhiLoginModalComponent
 } from './';
 
+import { DataTablesModule } from 'angular-datatables';
+
 @NgModule({
     imports: [
         JhipsterSandboxSharedLibsModule,
-        JhipsterSandboxSharedCommonModule
+        JhipsterSandboxSharedCommonModule,
+        DataTablesModule,
     ],
     declarations: [
         JhiLoginModalComponent,
@@ -45,7 +48,8 @@ import {
         JhipsterSandboxSharedCommonModule,
         JhiLoginModalComponent,
         HasAnyAuthorityDirective,
-        DatePipe
+        DatePipe,
+        DataTablesModule,
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 

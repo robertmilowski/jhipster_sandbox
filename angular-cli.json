@@ -20,7 +20,10 @@
       "styles": [
         "content/css/main.css"
       ],
-      "scripts": [],
+      "scripts": [
+         "../node_modules/jquery/dist/jquery.js",
+        "../node_modules/datatables.net/js/jquery.dataTables.js"
+      ],
       "environments": {}
     }
   ],
