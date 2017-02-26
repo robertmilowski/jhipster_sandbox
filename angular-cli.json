@@ -18,7 +18,8 @@
       "prefix": "jhi",
       "mobile": false,
       "styles": [
-        "content/css/main.css"
+        "content/css/main.css",
+        "../node_modules/datatables.net-dt/css/jquery.dataTables.css"
       ],
       "scripts": [
          "../node_modules/jquery/dist/jquery.js",

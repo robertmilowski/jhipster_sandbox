@@ -16,19 +16,19 @@
             </thead>
             <tbody>
             <tr *ngFor="let task of tasks ;trackBy: trackId">
-                <td><a [routerLink]="['../task', task.id ]">{{task.id}}</a></td>
+                <td><a [routerLink]="['/task', task.id ]">{{task.id}}</a></td>
                 <td>{{task.name}}</td>
                 <td>{{task.priority}}</td>
                 <td>{{task.startDate | date:'mediumDate'}}</td>
                 <td>
                     <div *ngIf="task.person">
-                        <a [routerLink]="['../person', task.person?.id ]" >{{task.person?.id}}</a>
+                        <a [routerLink]="['/person', task.person?.id ]" >{{task.person?.id}}</a>
                     </div>
                 </td>
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">
                         <button type="submit"
-                                [routerLink]="['../task', task.id ]"
+                                [routerLink]="['/task', task.id ]"
                                 class="btn btn-info btn-sm">
                             <span class="fa fa-eye"></span>
                             <span class="hidden-md-down" jhiTranslate="entity.action.view">View</span>
